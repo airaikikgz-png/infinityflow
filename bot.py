@@ -112,5 +112,4 @@ def start(m):
     if c.execute("SELECT tg FROM users WHERE tg=?", (tg,)).fetchone():
         bot.send_message(tg, "С возвращением!")
         return
-    markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    markup.add(types.KeyboardButton("Поделись номером", request
+    markup.add(types.KeyboardButton("Поделиться номером", request_contact=True))
